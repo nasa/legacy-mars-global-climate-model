@@ -1,0 +1,57 @@
+History file name:  fort.11
+Record number?  1
+J, I, L (Which are: Lat, Lon, Layer)  1,1,1
+
+ Run number: 2014.11
+
+
+
+   History file name:  fort.11
+          Run number:  2014.11
+       Record number:      1
+                Grid:  J =  1    I =  1    L =  1
+
+                 Ls =        0.06
+             RSDIST =      2.4277
+             DECMAX =     25.2193
+                TAU =        0.00
+             TOFDAY =        0.00
+ Time at Grid Point =       12.00
+
+             TAUTOT =      0.3000
+              RPTAU =        6.10
+
+         TOPOG(J,I) = -11184.5576  ----->   3.0066 km
+          ALSP(J,I) =      0.2492
+       SURFALB(J,I) =      0.0000
+         ZIN(J,I,1) =    570.2451
+               GIDN =      0.0545       GIDS =      0.0805
+
+                PSF =      7.0100
+               GASP =
+ GASP: Global Average Surface Pressure
+
+              PTROP =  8.0000E-04
+             P(J,I) =      4.4156
+        TSTRAT(J,I) =    170.0000
+           T(J,I,L) =    170.0000
+           U(J,I,L) =      0.0000
+           V(J,I,L) =      0.0000
+
+            GT(J,I) =    170.0000
+       STEMP(J,I,1) =    163.7660        SDEPTH( 2) =    0.0075 m
+       STEMP(J,I,5) =    163.7660        SDEPTH(10) =    0.0961 m
+
+        CO2ICE(J,I) =  0.0000E+00
+        ALICEN      =  0.6000            ALICES       =  0.5000
+        EGOCO2N     =  0.8000            EGOCO2S      =  1.0000
+       STRESSX(J,I) =  0.0000E+00        STRESSY(J,I) =  0.0000E+00
+       TAUSURF(J,I) =     0.00000
+
+       fuptopv(J,I) =     0.00000        fuptopir(J,I)  =     0.00000
+       fdntopv(J,I) =     0.00000
+      fupsurfv(J,I) =     0.00000        fupsurfir(J,I) =     0.00000
+      fdnsurfv(J,I) =     0.00000        fdnsurfir(J,I) =     0.00000
+
+        NPCFLAG =  F
+    Water vapor =  0.0000E+00
