@@ -1,6 +1,6 @@
-!     Legacy Mars GCM v24
-!     Mars Climate Modeling Center
-!     NASA Ames Research Center
+#     Legacy Mars GCM v24
+#     Mars Climate Modeling Center
+#     NASA Ames Research Center
 
 EXE      = .
 #F90_COMP = ifort
