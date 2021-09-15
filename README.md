@@ -28,29 +28,29 @@ A FORTRAN compiler is required to compile the GCM. We recommend the Intel or GNU
 
 The first steps are to install and compile the GCM on your machine.
 
-### Installation: Unpack the Tarfile
-
-To unpack the GCM, navigate to the directory that contains the tarfile (name) and type:
+### Installation: Clone the repository
 
 ```bash
-% tar -xf gcm2.3_Tutorial2021.tar.gz
+% git clone https://github.com/nasa/legacy-mars-global-climate-model.git
 ```
 
-This will produce a directory called `gcm2.3_Tutorial2021/`. Navigate into that directory and list its contents:
+This will produce a directory called `legacy-mars-global-climate-model`. Navigate into that directory and list its contents:
 
 ```bash
-% cd gcm2.3_Tutorial2021
-% du
+% cd legacy-mars-global-climate-model
+% ls -l
 ```
 
 The following directories will be visible:
 
 ```bash
-./documentation # contains GCM documentation
-./src           # contains the GCM source code
-./run           # is where you will run the model
-./run/data      # contains the required input files for the GCM
-./analysis      # contains a simple analysis routine for checking a simulation
+./documentation          # contains GCM documentation
+./code                   # contains the GCM source code
+./run                    # is where you will run the model
+./run/data               # contains the required input files for the GCM
+./analysis               # contains a simple analysis routine for checking a simulation
+./analysis/validation    # contains sample plots from the default settings
+./tutorial               # contains files used in this tutorial
 ```
 
 > **A Note on Directory Configuration**
@@ -59,10 +59,10 @@ The following directories will be visible:
 
 ### Compilation: Makefile & Compiler Compatibility
 
-From the main model directory (`gcm2.3_Tutorial2021/`), navigate to the source code (`src/`) directory:
+From the main model directory (`legacy-mars-global-climate-model/`), navigate to the source code (`code/`) directory:
 
 ```bash
-% cd src
+% cd code
 ```
 
 The Makefile is set up to use the Intel (ifort) compiler by default. If you are using gfortran, you will need to modify the Makefile. To do this, open the Makefile and uncomment the gfortran options and comment out the ifort options. The original lines are:
@@ -101,7 +101,7 @@ which creates an executable file called `gcm2.3`. Note that warnings that are no
 
 ## Running the Model
 
-Before running the model, you will need to move (or copy) the executable file (`gcm2.3`) to the `run/` directory, navigate into that directory, and list its contents (note that this command assumes you're using the default directory structure):
+Before running the model, you will need to move (or copy) the executable file (`gcm2.3`) to the `run/` directory as well as the tutorial namelist file (`tutorial/mars_tutorial`). Navigate into that directory, and list its contents (note that this command assumes you're using the default directory structure):
 
 ```bash
 % cp gcm2.3 ../run/
@@ -112,11 +112,11 @@ Before running the model, you will need to move (or copy) the executable file (`
 You will see the following in this directory, which are all the necessary components for running the model:
 
 ```bash
-gcm2.3  # the executable
-mars    # the input file that includes runtime options
+gcm2.3           # the executable
+mars_tutorial    # the input file that includes runtime options
 ```
 
-The `mars` file has the default set-up for your initial test simulation. The parameters and options in the `mars` file are described in more detail below, but for now, no editing of this file is needed.
+The `mars_tutorial` file has the default set-up for your initial test simulation. The parameters and options in the `mars_tutorial` file are described in more detail below, but for now, no editing of this file is needed.
 
 To run the model, type:
 
@@ -134,10 +134,10 @@ If the model is running correctly, you will see fort.11, fort.51, and fort.91 fi
 
 ## Checking the Default Simulation
 
-To check that the simulation ran properly, we will run a simple analysis routine called `htest.f90`. Navigate to the `analysis/` directory:
+To check that the simulation ran properly, we will run a simple analysis routine called `htest.f90`. Navigate to the `tutorial/` directory:
 
 ```bash
-% cd ../analysis/
+% cd ../tutorial/
 ```
 
 To compile `htest.f90` using gfortran, type:
