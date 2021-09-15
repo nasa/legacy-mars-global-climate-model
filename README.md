@@ -173,7 +173,7 @@ The output from `htest` will be:
 
 You should reproduce the information above quite closely. There may be variations in the fourth or fifth decimal place due to hardware and compiler differences but they should be small. If you reproduce these `htest` results, you have successfully installed and run the GCM.
 
-
+***
 
 ## Notices:
 
