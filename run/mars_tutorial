@@ -1,0 +1,69 @@
+!  GCM input file
+!  original 4-27-05
+!
+! runnumx - (real) run identifier
+! dlat    - (real) degrees between latitude grid points
+! jm      - (integer) number of latitude grid points
+! im      - (integer) number of longitude grid points
+! nlay    - (integer) number of layers
+! psf     - (real) average surface pressure (mbar)
+! ptrop   - (real) pressure at the tropopause (mbar)
+! dtm     - (real) requested time step (minutes)
+! tautot  - (real) visible dust optical depth at the reference pressure level
+! rptau   - (real) the reference pressure level tautot uses (mbar)
+! taue    - (real) requested run time (hours)
+! tauh    - (real) history output every tauh hours (hours)
+! tauid   - (real) starting time in days - leave 0 for now
+! tauih   - (real) starting time of run (hours); 0 for cold starts, equal
+!                  to the time of the first record of a warm start file.
+! nc3     - (integer) a full pass through COMP3 is done every NC3 time
+!                     steps
+!
+! rsetsw  - (integer) cold start/ warm start flag; = 1 for cold starts
+!                                                  = 0 for warm starts
+! lday    - (integer) day of a Mars year corresponding to a given Ls.
+!                     some values:    Ls       lday
+!                                   ------    ------
+!                                      0       173
+!                                     90       366
+!                                    180       545
+!                                    270        19
+!
+! conrnu  - (real) dust mixing ratio scale height
+!                  Standard value = 0.03   ~25km half-height
+!                  CONRNU = 0.003          ~50km half-height
+!                  CONRNU = 0.5            ~10km half-height
+!
+!-----------------------------------------------------------------------------#
+!                       
+! read in input.f 
+! rsetsw  -  1 for cold starts
+!            0 for warm starts
+! do not change "&inputnl"
+&inputnl 
+  runnumx = 2014.11
+  dlat = 5.0     jm = 36    im = 60   nlay = 24
+  psf  = 7.010   ptrop = 0.0008
+  dtm  = 2.0     nc3  =  8
+  tautot = 0.3  rptau = 6.1  conrnu = 0.03
+  taue = 480.0  tauh = 1.5    tauid = 0.0  tauih = 0.0
+  rsetsw = 1
+  cloudon = .false.
+  active_dust = .true.
+  active_water = .false.
+  microphysics = .true.
+  co2scav = .true.
+  timesplit = .false.
+  albfeed = .false.
+  latent_heat = .false.
+  vdust = .true.
+  icealb = 0.4  icethresh_depth = 5.0
+  dtsplit = 30.0
+  h2ocloudform = .false.
+ /
+
+! read in insdet.f 
+! do not change "&insdetnl"
+&insdetnl 
+  lday = 173 /
+
