@@ -625,6 +625,8 @@
 
       logical :: ALBFEED
 
+      logical :: VARY_CONR 
+
 !     Surface dust lifting: kg m^-2 s^-1
 !     Surface dust downward flux (Gravitational settling flux, at
 !     the surface): kg m^-2 s^-1

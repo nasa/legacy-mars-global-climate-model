@@ -46,7 +46,13 @@ C  GCM1.7  6/28/01   spatially varying dust
       do J=1,L_J
 
         tetalat = (-90.+180./L_J*J) / 180. * pi
-        conr    = 0.04 - ( 0.04 - conrtmp )*cos(tetalat)**0.75
+        if (vary_conr .eqv. .true.) then 
+         conr    = 0.04 - ( 0.04 - conrtmp )*cos(tetalat)**0.75
+        else
+         conr = conrnu
+        endif
+
+        print*,'conr',j,conr
 
         do I=1,L_I
 

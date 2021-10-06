@@ -76,7 +76,7 @@ C#######################################################################
      *                     CLOUDON, ACTIVE_DUST, ACTIVE_WATER,
      *                     MICROPHYSICS, CO2SCAV, TIMESPLIT, ALBFEED,
      *                     LATENT_HEAT,VDUST, ICEALB, ICETHRESH_DEPTH,
-     *                     DTSPLIT,H2OCLOUDFORM
+     *                     DTSPLIT,H2OCLOUDFORM,VARY_CONR
 
       integer :: i, j, k, n, ios, inu, jkl, ktpr,l,m
       real*8  :: taur, xls, taux, tauxm

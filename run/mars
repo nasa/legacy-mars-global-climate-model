@@ -59,7 +59,7 @@
   vdust = .true.
   icealb = 0.4  icethresh_depth = 5.0
   dtsplit = 30.0
-
+  vary_conr = .false.
  /
 
 ! read in insdet.f 

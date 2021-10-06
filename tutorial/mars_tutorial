@@ -60,6 +60,7 @@
   icealb = 0.4  icethresh_depth = 5.0
   dtsplit = 30.0
   h2ocloudform = .false.
+  vary_conr = .false.
  /
 
 ! read in insdet.f 
