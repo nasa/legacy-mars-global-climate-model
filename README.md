@@ -65,22 +65,22 @@ From the main model directory (`legacy-mars-global-climate-model/`), navigate to
 % cd code
 ```
 
-The Makefile is set up to use the Intel (ifort) compiler by default. If you are using gfortran, you will need to modify the Makefile. To do this, open the Makefile and uncomment the gfortran options and comment out the ifort options. The original lines are:
+The Makefile is set up to use the GNU Fortran (gfortran) compiler by default. Settings for the Intel (ifort) compiler are also available. You will need to modify the Makefile to use ifort. To do this, open the Makefile and comment the gfortran options and uncomment the ifort options. The original lines are:
 
 ```fortran
-F90_COMP  = ifort
-F_OPTS    = -c -O2
-#F90_COMP = gfortran
-#F_OPTS   = -c -O3 -finit-local-zero -frecord-marker=4
+#F90_COMP  = ifort
+#F_OPTS    = -c -O2
+F90_COMP = gfortran
+F_OPTS   = -c -O3 -finit-local-zero -frecord-marker=4
 ```
 
-and the lines modified for gfortran will instead be:
+and the lines modified for ifort will instead be:
 
 ```fortran
-#F90_COMP = ifort
-#F_OPTS   = -c -O2
-F90_COMP  = gfortran
-F_OPTS    = -c -O3 -finit-local-zero -frecord-marker=4
+F90_COMP = ifort
+F_OPTS   = -c -O2
+#F90_COMP  = gfortran
+#F_OPTS    = -c -O3 -finit-local-zero -frecord-marker=4
 ```
 
 Once the Makefile is ready, you can proceed with compiling the model. First, remove all object files (`*.o`), and module files (`*.mod`) to ensure a clean build by typing:
