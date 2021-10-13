@@ -95,7 +95,7 @@ Next, compile the code by typing:
 % make
 ```
 
-which creates an executable file called `gcm2.3`. Note that warnings that are not fatal may appear during the compile. If the executable is written, the compilation was successful. If fatal errors are produced during the compile and the compile fails, no executable will be created. In this case, check that the compiler can be found on the command line (i.e., set the `$PATH` correctly) and that the Makefile is set up properly for your compiler. If you still have errors and an executable is not created, proceed to the trouble-shooting section below.
+which creates an executable file called `gcm2.3`. Note that warnings that are not fatal may appear during the compile. If the executable is written, the compilation was successful. If fatal errors are produced during the compile and the compile fails, no executable will be created. In this case, check that the compiler can be found on the command line (i.e., set the `$PATH` correctly) and that the Makefile is set up properly for your compiler.
 
 ***
 
