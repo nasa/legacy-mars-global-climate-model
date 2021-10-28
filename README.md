@@ -104,7 +104,7 @@ which creates an executable file called `gcm2.3`. Note that warnings that are no
 Before running the model, you will need to move (or copy) the executable file (`gcm2.3`) to the `run/` directory as well as the tutorial namelist file (`tutorial/mars_tutorial`). Navigate into that directory, and list its contents (note that this command assumes you're using the default directory structure):
 
 ```bash
-% cp gcm2.3 ../run/
+% cp gcm2.3 ../tutorial/mars_tutorial ../run/
 % cd ../run/
 % ls
 ```
@@ -121,7 +121,7 @@ The `mars_tutorial` file has the default set-up for your initial test simulation
 To run the model, type:
 
 ```bash
-% ./gcm2.3 <mars_tutorial> m.out &
+% ./gcm2.3 mars_tutorial m.out &
 ```
 
 In this command, `m.out` is the name of the output log file that will be produced, and the `&` will make the model run in the background.
