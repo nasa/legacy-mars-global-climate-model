@@ -154,10 +154,10 @@ To compile using ifort, type:
 % ifort -o htest htest.f90 historymod.o
 ```
 
-Next, copy the `htest` executable and `htest.in` input file to the `run/` directory and navigate to it:
+Next, copy the `htest` executable (`htest.exe` in Windows) and `htest.in` input file to the `run/` directory and navigate to it:
 
 ```bash
-% cp htest htest.in ../run/
+% cp htest htest.in ../run/   #  cp htest.exe htest.in ../run/ in Windows
 % cd ../run/
 ```
 
