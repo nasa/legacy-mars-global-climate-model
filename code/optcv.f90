@@ -47,6 +47,7 @@
       real*8  :: Qextref(L_LEVELS+1)
       real*8  :: TAUREF(L_LEVELS+1)
       real*8  :: TAUREF_save(L_LEVELS+1)
+      real*8  :: TAUREFCLD_save(L_LEVELS+1)
 
 !     For clouds
       real*8  :: Qxvcld(L_LEVELS+1,L_NSPECTV)
@@ -85,6 +86,7 @@
 
       do k=1,L_LEVELS+1
         tauref_save(k) = tauref(k)
+        taurefcld_save(k) = taurefcld(k)
       end do
 
 !  Determine the total gas opacity throughout the column, for each
@@ -275,6 +277,7 @@
 
       do k=1,L_LEVELS+1
         tauref(k) = tauref_save(k)
+        taurefcld(k) = taurefcld_save(k)
       end do
 
       RETURN

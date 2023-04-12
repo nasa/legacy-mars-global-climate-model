@@ -81,8 +81,8 @@ c
       d_nuc  = a0 / sqrt(2.)
 
 c  Contact parameter of water ice on dust ( m=cos(theta) )
-!     mteta  = 0.95        !Franck's number
-      mteta  = 0.975       !Franck recommends - newer value
+      mteta  = 0.95        !Franck's number
+!      mteta  = 0.975       !Franck recommends - newer value
 
 c  nu_eff = exp( dev^2) - 1
 c  Standard deviation of the dust distribution
@@ -188,6 +188,11 @@ c     size bins and for each spectral interval.
           qscati_dst(i,l) = qscati_dst(i,l) * factor 
         enddo
       enddo
+
+      print*,'qexti 1 = ',qexti_dst(1,:)
+      print*,'qscati 1 = ',qscati_dst(1,:)
+      print*,'gi 1 = ',gi_dst(1,:)
+
 
       close(60)
       close(61)
